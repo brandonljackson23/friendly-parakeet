@@ -53,7 +53,7 @@ generatePassword = function() {
     };
 
     while (numberCriteria == 0) {
-      var includeNumber = prompt("Wo you want to include numbers? (y/n)");
+      var includeNumber = prompt("Do you want to include numbers? (y/n)");
         includeNumber = includeNumber.toLowerCase();
 
       if (includeNumber === 'y') {
