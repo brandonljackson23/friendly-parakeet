@@ -1,6 +1,6 @@
 // Assignment code here
 // wrap in writePassword function so we can call it when user clicks generatePassword btn
-writePassword = function() {
+generatePassword = function() {
   // set up variables for while funtions to check if criteria is met before advancing to next prompt
   var yes = 0;
   var pwdLengthCriteria = 0;
@@ -122,8 +122,7 @@ writePassword = function() {
     return result;
   };
   // if password is too long truncate it to match the length designated by user. then display password to user
-  alert("Your password is: " + makePwd(pwdLength / yes).substring(0, pwdLength));
-  console.log(makePwd(pwdLength / yes).substring(0, pwdLength));
+  return makePwd(pwdLength / yes).substring(0, pwdLength);
 };
 
   // Get references to the #generate element
@@ -132,6 +131,7 @@ writePassword = function() {
   // Write password to the #password input
   function writePassword() {
     var password = generatePassword();
+    console.log(password);
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
